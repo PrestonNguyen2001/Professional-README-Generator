@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 const questions = [
     // Add Questions 
@@ -53,7 +53,7 @@ const questions = [
         type: 'list',
         message: "Choose a license for your application:",
         name: 'license',
-        choices: ['MIT', 'GNU General Public License (GPL)', 'Apache License', 'BSD License', 'GNU Lesser General Public License (LGPL)', 'None'],
+        choices: ['MIT', 'GNU General Public License (GPL)', 'Apache 2.0 License', 'BSD 3-Clause', 'GNU Lesser General Public License (LGPL)', 'Boost Software License 1.0','IBM Public License Version 1.0', 'None'],
         default: 'None',
         validate: function (answer) {
             if (answer === 'None') {
@@ -91,7 +91,6 @@ const questions = [
         type: 'input',
         message: "What is your GitHub username? (No @ needed)",
         name: 'username',
-        default: 'connietran-dev',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("A valid GitHub username is required.");
@@ -103,7 +102,6 @@ const questions = [
         type: 'input',
         message: "What is the name of your GitHub repo?",
         name: 'repo',
-        default: 'readme-generator',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("A valid GitHub repo is required for a badge.");
