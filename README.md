@@ -54,6 +54,7 @@ To use this README generator, follow these steps:
 2. Follow the prompts to input information about your project.
 3. Once you've completed all the prompts, the application will generate a professional README file based on your inputs.
 
+To view a video on how to install and use this application, click here: https://youtu.be/ov6fEGUJ8ms
 ## Contributing
 You can contribute to this project in various ways:
 
